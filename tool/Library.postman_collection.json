@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "36c8f789-fe83-4af2-9e4e-1a2868b9179c",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Import Books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/sibgha/Downloads/books.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/csv/upload_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"csv",
+						"upload_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/sibgha/Downloads/user.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/csv/upload_users",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"csv",
+						"upload_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Borrowed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/sibgha/Downloads/borrowed.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/csv/upload_borrowed",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"csv",
+						"upload_borrowed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Available Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/available_books",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"available_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books By Borrrower and Borrowed Date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/books_by_borrower?userId=190&fromDate=27.02.2011&toDate=08.08.2022",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"books_by_borrower"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "190"
+						},
+						{
+							"key": "fromDate",
+							"value": "27.02.2011",
+							"description": "."
+						},
+						{
+							"key": "toDate",
+							"value": "08.08.2022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
